@@ -653,7 +653,7 @@ search.addEventListener('keydown', async (e) => {
         loadingMessage.innerText = 'Searching Song...';
         
         // MUSIC API
-        const music = await fetch(`https://api-faa.my.id/faa/soundcloud-play?q=${q}`).then(r => r.json()).catch(() => null);
+        const music = await fetch(`https://api-faa.my.id/faa/soundcloud-play?query=${q}`).then(r => r.json()).catch(() => null);
 
         if (!music || !music.status) {
             loadingMessage.innerText = 'Not Found :(';
